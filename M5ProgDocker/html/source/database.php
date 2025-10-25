@@ -5,7 +5,7 @@ include_once "config.php";
 function database_connect()
 {
     $connection = new mysqli(DB_HOST,DB_USER,DB_PASSWORD,DB_SCHEMA_NAME);
-    if($connection->connect_errno)
+    if($connection->connect_error)
     {
         die("failed to connect" . $connection->connect_error);
     }
